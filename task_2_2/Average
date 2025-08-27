@@ -1,0 +1,7 @@
+def avg(*nums):
+    sum = 0
+    for el in nums:
+        sum += el
+    print(sum / len(nums))
+
+avg(4, 5, 2, 3)
