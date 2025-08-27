@@ -1,0 +1,8 @@
+str1 = "abccdlldca"
+count = 0
+for i in range(len(str1)):
+    count = 0
+    for j in range(len(str1)):
+        if str1[i] == str1[j]:
+            count += 1
+    print(f"{str1[i]}, occured {count} time`s")
