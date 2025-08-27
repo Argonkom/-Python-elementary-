@@ -1,0 +1,15 @@
+import threading
+import time
+
+def factorial(x):
+    if x <= 0 or x == 1:
+        return 1
+    result = x
+    for i in range(1, x):
+        result *= i
+    return result
+
+t =threading.Thread(target=factorial, daemon=True, args=(1000,))
+t.start()
+t.join()
+print(factorial(1000))
