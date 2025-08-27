@@ -1,0 +1,18 @@
+import random
+
+random_number = random.randint(1, 10)
+print(random_number)  # For debugging purposes, you can see the random number generated
+user_number = int(input("Guess a number between 1 and 10:"))
+iteration = 1
+while user_number != random_number:
+    if user_number < random_number:
+        print("The number is greater than your guess.")
+        iteration += 1
+        user_number = int(input("Try again:"))
+    elif user_number > random_number:
+        print("The number is smaller than your guess.")
+        iteration += 1
+        user_number = int(input("Try again:"))
+
+if user_number == random_number:
+    print(f"Congratulations! You've guessed the number {random_number} in {iteration} attempts.")
