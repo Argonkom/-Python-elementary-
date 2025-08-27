@@ -1,0 +1,12 @@
+n = int(input("How many numbers would you like to see? "))
+
+def fib(n):
+    a, b = 0, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+
+numbers = fib(n)
+
+for num in numbers:
+    print(num)
