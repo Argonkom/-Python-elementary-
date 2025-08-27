@@ -1,0 +1,7 @@
+def sum(a):
+    def sum1(b):
+        print(a + b)
+    return sum1
+
+sum(3)(7)
+
