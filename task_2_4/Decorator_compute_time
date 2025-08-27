@@ -1,0 +1,19 @@
+import time
+
+
+def timer(func):
+    start_time = time.time()
+    func()
+    end_time = time.time()
+    print("Time elapsed to execute program:", end_time - start_time)
+
+
+@timer
+def milion():
+    num = 0
+    while num < 100000000:
+        num += 1
+    print("The number:", num)
+
+
+milion
