@@ -1,0 +1,18 @@
+#main.py
+def findNum(str):
+    for i in range(len(str)):
+        count = 0
+        for j in range(len(str)):
+            if str[i] == str[j]:
+                count += 1
+        print(f"{str[i]}, occured {count} time s")
+
+#Printmain.py
+import argparse
+from main import findNum
+
+parser = argparse.ArgumentParser(description='Fills the input')
+parser.add_argument('string', type=str, help='Enter your string')
+args = parser.parse_args()
+
+findNum(args.string)
