@@ -1,0 +1,26 @@
+with open("info.txt", "r") as f:
+    text = f.read()
+    amountWords = text.split()
+
+    countWords = 0
+    for i in amountWords:
+        countWords += 1
+    print(f"Amount of words in text: {countWords}")
+
+    countLetters = 0
+    for i in text:
+        countLetters += 1
+    print(f"Count of characters: {countLetters}")
+
+    max = 0
+    word = ""
+    for i in amountWords:
+        count = 0
+        for j in amountWords:
+            if i == j:
+                count += 1
+        if count > max:
+            max = count
+            word = i
+    print(f"Word '{word}' happens {max} times")
+
