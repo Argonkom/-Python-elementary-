@@ -1,0 +1,35 @@
+#Test.py
+from main import findNum
+import unittest
+
+class TestfindNum(unittest.TestCase):
+    def test_findNum(self):
+        self.assertEqual(findNum("abcd1l"), [
+            "a occurred 1 time's",
+            "b occurred 1 time's",
+            "c occurred 1 time's",
+            "d occurred 1 time's",
+            "1 occurred 1 time's",
+            "l occurred 1 time's"
+        ])
+
+if __name__ == '__main__':
+    unittest.main()
+
+#PrintMain.py
+from main import findNum
+
+str1 = "abcd1l"
+findNum(str1)
+
+
+#main.py
+def findNum(str):
+    result = []
+    for i in range(len(str)):
+        count = 0
+        for j in range(len(str)):
+            if str[i] == str[j]:
+                count += 1
+        result.append(f"{str[i]} occurred {count} time's")
+    return result
